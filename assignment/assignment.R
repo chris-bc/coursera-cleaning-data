@@ -42,3 +42,4 @@ tidyData <- tidyData[, lapply(.SD, mean), by=c("Subject","Activity")]
 
 setorder(tidyData, Subject, Activity, dataType)
 
+write.table(tidyData, file="avgCols.txt")
