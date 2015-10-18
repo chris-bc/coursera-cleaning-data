@@ -22,7 +22,7 @@ allData <- rbind(testData,trainData)
 #2. Extracts only the measurements on the mean and standard deviation for each measurement
 
 #TODO: Revise text search and figure out how to do a contains to do colname contains .mean or colname contains .std
-meanAndSDCols <- grep("mean|std|Subject|Activity|dataType", colnames(allData))
+meanAndSDCols <- grep("mean|std|Subject|Activity|dataType", colnames(allData), ignore.case = TRUE)
 meanAndSD <- allData[,meanAndSDCols]
 
 #3. Uses descriptive activity names to name the activities in the data set
